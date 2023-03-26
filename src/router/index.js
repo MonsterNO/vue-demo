@@ -19,6 +19,11 @@ const routes = [
     path: '/redirect',
     name: 'Redirect',
     component: () => import(/* webpackChunkName: "about" */ '../views/auth/redirect.vue')
+  },
+  {
+    path:'/office',
+    name:'Office',
+    component:()=>import('../views/office')
   }
 ]
 
