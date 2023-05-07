@@ -24,6 +24,11 @@ const routes = [
     path:'/office',
     name:'Office',
     component:()=>import('../views/office')
+  },
+  {
+    path:'/lottie',
+    name:'Lottie',
+    component:()=>import('../views/lottie')
   }
 ]
 
