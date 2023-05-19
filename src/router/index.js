@@ -26,9 +26,14 @@ const routes = [
     component: () => import('../views/upload/index.vue')
   },
   {
-    path: '/lottie',
-    name: 'Lottie',
-    component: () => import('../views/lottie/index.vue')
+    path:'/office',
+    name:'Office',
+    component:()=>import('../views/office')
+  },
+  {
+    path:'/lottie',
+    name:'Lottie',
+    component:()=>import('../views/lottie')
   }
 ]
 
