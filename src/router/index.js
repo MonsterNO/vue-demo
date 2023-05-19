@@ -13,12 +13,22 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/auth/login.vue')
+    component: () => import('../views/auth/login.vue')
   },
   {
     path: '/redirect',
     name: 'Redirect',
-    component: () => import(/* webpackChunkName: "about" */ '../views/auth/redirect.vue')
+    component: () => import('../views/auth/redirect.vue')
+  },
+  {
+    path: '/upload',
+    name: 'Upload',
+    component: () => import('../views/upload/index.vue')
+  },
+  {
+    path: '/lottie',
+    name: 'Lottie',
+    component: () => import('../views/lottie/index.vue')
   }
 ]
 
