@@ -34,6 +34,11 @@ const routes = [
     path:'/lottie',
     name:'Lottie',
     component:()=>import('../views/lottie')
+  },
+  {
+    path:'/vdocapture',
+    name:'VideoCapture',
+    component:()=>import('../views/videoCapture')
   }
 ]
 
