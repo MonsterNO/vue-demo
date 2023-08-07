@@ -39,6 +39,7 @@
     <div class="title">功能四：excel预览</div>
     <input type="file" name="file" @change="preview">
     <vueofficeExcel :src="excelSrc" style="height: 92vh;"></vueofficeExcel> -->
+    <vueofficeExcel :src="excelSrc" style="height: 92vh;"></vueofficeExcel>
 
     <div class="title">功能五：word预览</div>
     <vueofficeword :src="wordSrc" style="height: 92vh;"></vueofficeword>
