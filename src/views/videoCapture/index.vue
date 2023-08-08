@@ -12,21 +12,23 @@ export default {
   name: 'VideoCapture',
   data() {
     return {
-      list: []
+      list: [],
     };
   },
   methods: {
     async changeFile(e) {
       let file = e.target.files[0];
+      let vdo = document.createElement('video');
+      vdo.src = URL.createObjectURL(file);
+      // 间隔1秒生成10张封面图
       for (let i = 0; i < 10; i++) {
-        let frame = await this.captureFrame(file, i * 1);
+        let frame = await this.captureFrame(vdo, i * 1);
         this.list.push(frame);
       }
     },
     // 获取关键帧
-    captureFrame(vdoFile, time = 0) {
+    captureFrame(vdo, time = 0) {
       return new Promise((resolve, reject) => {
-        let vdo = document.createElement('video');
         vdo.currentTime = time;
         vdo.muted = true;
         vdo.autoplay = true;
@@ -34,7 +36,6 @@ export default {
           let frame = await this.drawVideo(vdo);
           resolve(frame);
         };
-        vdo.src = URL.createObjectURL(vdoFile);
       });
     },
     // 绘制视频关键帧
